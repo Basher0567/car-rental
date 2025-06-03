@@ -18,9 +18,9 @@
                                 :search-field="searchField"
                                 :search-value="searchValue"
                                 show-index>
-                                <template #item-number="{ id,name }">
+                                <template #item-number="{ id }">
                                     <Link class="btn btn-success btn-sm" :href="`/RentalSavePage?id=${id}`">Edit</Link>
-                                    <button class="btn btn-success mx-3 btn-sm" @click="itemClick(number,player)">Show</button>
+                                    <Link class="btn btn-success mx-3 btn-sm" :href="`/show-rental?id=${id}`">Show</Link>
                                     <button class="btn btn-danger btn-sm" @click="deleteClick(id)">Delete</button>
                                 </template>
                             </EasyDataTable>

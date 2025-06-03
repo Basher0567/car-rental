@@ -48,7 +48,7 @@ Route::post("/update-car",[CarController::class,'updateCar'])->name('updateCar')
 Route::get("/delete-car/{id}",[CarController::class,'deleteCar'])->name('deleteCar');
 Route::post("/car-by-id",[CarController::class,'carById'])->name('carById');
 Route::get("/list-car",[CarController::class,'carList'])->name('car-list');
-Route::get("/show-car/{id}",[CarController::class,'carDetailsPage'])->name('carDetailPage');
+Route::get("/show-car",[CarController::class,'carDetailsPage'])->name('carDetailPage');
 
 
 //rental
@@ -57,6 +57,7 @@ Route::post("/update-rental",[RentalController::class,'updateRental'])->name('up
 Route::get("/delete-rental/{id}",[RentalController::class,'deleteRental'])->name('deleteRental');
 Route::post("/rental-by-id",[RentalController::class,'rentalById'])->name('rentalById');
 Route::get("/list-rental",[RentalController::class,'rentalList'])->name('rentalList');
+Route::get("/show-rental",[RentalController::class,'rentalDetailsPage'])->name('rentalDetailsPage');
 
 
 //customer

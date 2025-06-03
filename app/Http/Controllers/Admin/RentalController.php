@@ -141,4 +141,10 @@ class RentalController extends Controller
     public function rentalList(Request $request){
         return Rental::get();
     }
+    public function rentalDetailsPage(Request $request){
+         $rental_id=$request->query('id');
+         //return $rental_id;
+         $rental=Rental::where('id',$rental_id)->with('car','user')->first();
+         return Inertia::render('RentalDetailsPage1',['rental'=>$rental]);
+    }
 }
