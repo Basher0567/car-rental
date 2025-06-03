@@ -66,6 +66,7 @@ Route::post("/update-customer",[CustomerController::class,'updateCustomer'])->na
 Route::get("/delete-customer/{id}",[CustomerController::class,'deleteCustomer'])->name('deleteCustomer');
 Route::post("/customer-by-id",[CustomerController::class,'customerById'])->name('customerById');
 Route::get("/list-customer",[CustomerController::class,'customerList'])->name('customerList');
+Route::get("/show-customer",[CustomerController::class,'customerDetailsPage'])->name('customerDetailsPage');
 
 //Dashboard
 Route::get("/summary",[DashboardController::class,'summary'])->name('summary');

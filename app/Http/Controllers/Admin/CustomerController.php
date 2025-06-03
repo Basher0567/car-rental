@@ -128,4 +128,9 @@ class CustomerController extends Controller
     public function customerList(Request $request){
         return Customer::get();
     }
+    public function customerDetailsPage(Request $request){
+        $customer_id=$request->query('id');
+        $customers=Customer::where('id',$customer_id)->first();
+        return Inertia::render('CustomerDetailsPage',['customer'=>$customers]);
+    }
 }
